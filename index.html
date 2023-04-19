@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="assets\icone.png">
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js-sha256/src/sha256.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>AstroPhoto</title>
+
+        <script>
+
+            $(document).ready(function(){
+                // digital
+                $(".digital").mouseover(function(){
+                    $(".overGalerie").text("Digital");
+                })
+                $(".digital").mouseout(function(){
+                    $(".overGalerie").text("");
+                })
+
+                //astro
+                $(".astro").mouseover(function(){
+                    $(".overGalerie").text("AstroPhoto");
+                })
+                $(".astro").mouseout(function(){
+                    $(".overGalerie").text("");
+                })
+
+                //paysage
+                $(".paysage").mouseover(function(){
+                    $(".overGalerie").text("Paysage");
+                })
+                $(".paysage").mouseout(function(){
+                    $(".overGalerie").text("");
+                })
+
+
+                //info
+                $(".info").mouseover(function(){
+                    $(".overGalerie").text("Informatique");
+                })
+                $(".info").mouseout(function(){
+                    $(".overGalerie").text("");
+                })
+
+
+                //art
+                $(".art").mouseover(function(){
+                    $(".overGalerie").text("Art");
+                })
+                $(".art").mouseout(function(){
+                    $(".overGalerie").text("");
+                })
+            });
+
+        </script>
+    </head>
+    <body id="top_page", class = "light-mode">
+
+        <!-- image de fond page principale -->
+        <div class="content"></div>
+
+        <!-- présentation page principale -->
+        <div class="caption">
+
+            <!-- menu caché a gauche sur la page pincipale -->
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#contenu" onclick="closeNav()">Galerie</a>
+              <a href="#contenu" onclick="closeNav()">Informatique</a>
+              <a href="#contenu" onclick="closeNav()">Contact</a>
+              <!-- <a href="contact.html">Contact</a> -->
+            </div>
+
+            <!-- hamburger menu -->
+            <a class = "nav" onclick="openNav()">
+                <div class = "un"></div>
+                <div class = "deux"></div>
+                <div class = "trois"></div>
+            </a>
+
+            <!-- titre page principale -->
+            <div class="title">
+                <span class="border">AstroPhoto</span>
+                <br>
+                <span class="border">Developped by <a href="https://twitter.com/MrAnyx/" target="_blank">MrAnyx</a></span>
+                <br>
+                <br>
+            </div>
+
+
+            <!-- fleche down animation -->
+            <div class="down">
+                <a href="#contenu"><img src="assets/down.png"></a>
+            </div>
+
+            <!-- fleche bas droite pour retour haut page -->
+            <a href="#top_page"><img src="assets/arrowUp.png" class="arrowUp"></a>
+
+        </div>
+
+        <!-- div pour le contenu du site -->
+        <div class="contenuPage" id="contenu">
+
+            <!-- menu bar -->
+            <nav class="navMenu">
+                <ul class="ulMenu">
+                    <li class="liMenu liMenuDernier"><a onclick="toggleDarkLight()" id = "changementCouleur"><strong style="font-size: 18px;">🌛</strong></a ></li>
+                    <li class="liMenu"><a href="#">Contact</a></li>
+                    <li class="liMenu"><a href="#">Informatique</a></li>
+                    <li class="liMenu"><a href="#contenu">Galerie</a></li>
+                    <li class="liMenuTitle"><a href = "#top_page"><img src="assets/Logo.png" class = "imageTitleMenu"></a></li>
+                </ul>
+            </nav>
+
+
+
+            <div id = "galerie">
+
+                <div class="texte1">
+                    <strong style="font-size: 30px;">Galerie</strong>
+                    <div class="souligneGalerie"></div>
+                    <span><strong>«</strong></span> <i>Une image vaut mille mots</i> <span><strong>»</strong></span><span class="confucius">Confucius</span>
+
+
+
+                </div>
+                <div class = "overGalerie"></div>
+                <div class="listeImage">
+
+                    <img src="assets/digital.jpg" class="digital">
+                    <img src="assets/astro.jpeg" class = "astro">
+                    <img src="assets/paysage.jpeg" class="paysage">
+                    <img src="assets/info.jpg" class="info">
+                    <img src="assets/art.jpg" class="art">
+
+                </div>
+
+                <!-- <button onclick="myFunction()">Click Me</button>
+
+                <div id="myDIV">Hello</div> -->
+
+            </div>
+
+
+        </div>
+
+    </body>
+</html>
